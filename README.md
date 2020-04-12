@@ -8,6 +8,9 @@
   <p>
 
 ![Field Control ♥](https://img.shields.io/badge/Field%20Control-%20%20%20%20%20%20♥-blue.svg)
+![Continuous Integration](https://github.com/FieldControl/mautic/workflows/Continuous%20Integration/badge.svg)
+[![Maintainability](https://api.codeclimate.com/v1/badges/bcbbb6e8ef15e7d3be27/maintainability)](https://codeclimate.com/github/FieldControl/mautic/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/bcbbb6e8ef15e7d3be27/test_coverage)](https://codeclimate.com/github/FieldControl/mautic/test_coverage)
 
   </p>
   <p>
@@ -50,8 +53,11 @@ node bin/playground.js
 ```js
 const Mautic = require('mautic')
 const client = new Mautic({
-  username: 'luiz@gmail.com',
-  password: 'shhhhhhhhhhhh<3~'
+  baseUrl: 'http://mautic-instance/api',
+  auth: {
+    username: 'luiz',
+    password: 'shhhhhhhhhhhhhh!:x'
+  }
 })
 ```
 

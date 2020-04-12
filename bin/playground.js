@@ -2,7 +2,7 @@ const Mautic = require('./../src/index')
 const client = new Mautic({
   baseUrl: 'https://ip-instance/api',
   auth: {
-    username: 'luiz@fieldcontrol.com.br',
+    username: 'luiz',
     password: 'sssshhhhhhhhhh! :x~'
   }
 })
