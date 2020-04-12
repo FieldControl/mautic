@@ -22,6 +22,15 @@
 
 ---
 
+## Status
+
+:exclamation: | WIP: Working in progress and we need you, pull requests are welcome.
+---: | :---
+
+<div align="center">
+  <img height="20px" src=".github/static/separator.png"/>
+</div>
+
 ## Installation
 
 This client is intended for server side use only.
@@ -36,11 +45,9 @@ npm install mautic --save
 
 ## Playground
 
-You can run and watch everything working fine at [bin/playground.js](https://github.com/FieldControl/mautic/blob/master/bin/playground.js) script
+You can play and watch everything working at [bin/playground.js](https://github.com/FieldControl/mautic/blob/master/bin/playground.js):
 
-**Note**: You must enter your accessToken before running:
-
-```
+```bash
 node bin/playground.js
 ```
 
@@ -84,8 +91,6 @@ const client = new Mautic({
 This project is licensed under the [MIT License](https://opensource.org/licenses/MIT) - see the [LICENSE](LICENSE) file for details.
 
 <div align="center">
-  <br/>
-  <br/>
   <br/>
   <br/>
 </div>
