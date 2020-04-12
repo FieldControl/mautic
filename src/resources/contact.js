@@ -3,8 +3,8 @@ class Contact {
     this.client = client
   }
 
-  get (id) {
-    return this.client.get(`contacts/${id}`)
+  get (contactId) {
+    return this.client.get(`contacts/${contactId}`)
   }
 
   list (params = {}) {
@@ -16,16 +16,44 @@ class Contact {
     return this.client.post('contacts/new', contact)
   }
 
-  edit (id, contact) {
-    return this.client.patch(`contacts/${id}/edit`, contact)
+  edit (contactId, contact) {
+    return this.client.patch(`contacts/${contactId}/edit`, contact)
   }
 
-  editOrCreate (id, contact) {
-    return this.client.put(`contacts/${id}/edit`, contact)
+  editOrCreate (contactId, contact) {
+    return this.client.put(`contacts/${contactId}/edit`, contact)
   }
 
-  delete (id) {
-    return this.client.delete(`contacts/${id}/delete`)
+  delete (contactId) {
+    return this.client.delete(`contacts/${contactId}/delete`)
+  }
+
+  addPoints (contactId, points, data = { eventname: undefined, eventaction: undefined }) {
+    return this.client.post(`contacts/${contactId}/points/plus/${points}`, data)
+  }
+
+  subtractPoints (contactId, points, data = { eventname: undefined, eventaction: undefined }) {
+    return this.client.post(`contacts/${contactId}/points/minus/${points}`, data)
+  }
+
+  getNotes (contactId) {
+    return this.client.get(`contacts/${contactId}/notes`)
+  }
+
+  getActivityEvents (contactId, params = {}) {
+    return this.client.get(`contacts/${contactId}/activity`, params)
+  }
+
+  getCompanies (contactId) {
+    return this.client.get(`contacts/${contactId}/companies`)
+  }
+
+  addUTMTags (contactId, data) {
+    return this.client.post(`contacts/${contactId}/utm/add`, data)
+  }
+
+  removeUTMTags (contactId, utmId) {
+    return this.client.post(`contacts/${contactId}/utm/${utmId}/remove`)
   }
 }
 

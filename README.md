@@ -73,6 +73,39 @@ const client = new Mautic({
 </div>
 
 
+### Resources
+- [Contact](#contact)
+
+### Contact
+
+```js
+// List contacts
+const response = await client.contacts.list()
+```
+
+```js
+// Get contact by id
+const response = await client.contacts.get(1) 
+```
+
+```js
+// Create contact
+const response = await client.contacts.create({
+  firstname: 'Luiz',
+  lastname: 'Freneda',
+  email: 'luiz@freneda.com.br',
+  owner: 1
+})
+```
+
+<div align="right">
+  <a href="https://github.com/FieldControl/mautic/blob/master/test/resources/contacts.spec.js" target="_blank">see tests</a> - <a href="https://developer.mautic.org/#contacts" target="_blank">see docs</a>
+</div>
+
+<div align="center">
+  <img height="20px" src=".github/static/separator.png"/>
+</div>
+
 ## Pull Requests
 
 - **Add tests!** Your patch won't be accepted if it doesn't have tests.

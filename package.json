@@ -1,6 +1,6 @@
 {
   "name": "mautic",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Unofficial Node.js bindings to the Mautic REST API - https://developer.mautic.org/#rest-api",
   "main": "src/index.js",
   "directories": {
