@@ -1,5 +1,5 @@
 const axios = require('axios')
-const { Contact } = require('./resources')
+const { Contact, Segment } = require('./resources')
 
 const responseWith = (response) => ({
   status: response.status,
@@ -19,6 +19,7 @@ class Client {
       'User-Agent': 'mautic/0.0.1 - unofficial node bindings'
     }
     this.contacts = new Contact(this)
+    this.segments = new Segment(this)
   }
 
   get (resourceUri, params = {}) {
@@ -29,7 +30,7 @@ class Client {
     }).then(responseWith).catch(responseErrWith)
   }
 
-  post (resourceUri, payload) {
+  post (resourceUri, payload = {}) {
     return axios.post(`${this.baseUrl}/${resourceUri}`, payload, {
       headers: this.headers,
       auth: this.auth
