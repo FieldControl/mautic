@@ -75,6 +75,7 @@ const client = new Mautic({
 
 ### Resources
 - [Contact](#contact)
+- [Segment](#segment)
 
 ### Contact
 
@@ -100,6 +101,22 @@ const response = await client.contacts.create({
 
 <div align="right">
   <a href="https://github.com/FieldControl/mautic/blob/master/test/resources/contacts.spec.js" target="_blank">see tests</a> - <a href="https://developer.mautic.org/#contacts" target="_blank">see docs</a>
+</div>
+
+### Segment
+
+```js
+// Add contact to segment
+const response = await client.segments.addContact(1, 2) // segmentId, contactId
+```
+
+```js
+// Remove contact of segment
+const response = await client.segments.removeContact(1, 2) // segmentId, contactId
+```
+
+<div align="right">
+  <a href="https://github.com/FieldControl/mautic/blob/master/test/resources/segments.spec.js" target="_blank">see tests</a> - <a href="https://developer.mautic.org/#segments" target="_blank">see docs</a>
 </div>
 
 <div align="center">
