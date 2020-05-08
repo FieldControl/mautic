@@ -200,42 +200,44 @@ const response = await client.segments.removeContact(1, 2) // segmentId, contact
 
 ```js
 // Get company by id
-const response = await client.companies.get(companyId)
+const response = await client.companies.get(1) // companyId
 ```
 
 ```js
 // List companies
-const response = await client.companies.list (data)
+const response = await client.companies.list({
+  name: 'Field Control'
+})
 ```
 
 ```js
 // Create a company
-const response = await client.companies.create (company)
+const response = await client.companies.create(2) // company
 ```
 
 ```js
 // Edit a company
-const response = await client.companies.edit (companyId, company)
+const response = await client.companies.edit(1, 2) // companyId, company
 ```
 
 ```js
 // If the given id exists, clear all company info and push with new ones, if not, create a company
-const response = await client.companies.editOrCreate (companyId, company)
+const response = await client.companies.editOrCreate(1, 2) // companyId, company
 ```
 
 ```js
 // Delete a company
-const response = await client.companies.delete (companyId)
+const response = await client.companies.delete(1) // companyId
 ```
 
 ```js
 // Add a contact to a company
-const response = await client.companies.addContact (companyId, contactId)
+const response = await client.companies.addContact(1, 2) // companyId, contactId
 ```
 
 ```js
 // Remove a contact of a company
-const response = await client.companies.removeContact (companyId, contactId)
+const response = await client.companies.removeContact(1, 2) // companyId, contactId
 ```
 
 <div align="right">
