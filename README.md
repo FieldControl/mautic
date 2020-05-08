@@ -80,13 +80,18 @@ const client = new Mautic({
 ### Contact
 
 ```js
+// Get contact by id
+const response = await client.contacts.get(contactId)
+```
+
+```js
 // List contacts
 const response = await client.contacts.list()
 ```
 
 ```js
-// Get contact by id
-const response = await client.contacts.get(1) 
+// List contacts with a search
+const response = await client.contacts.list({ search: 'exemple@exemple.com' })
 ```
 
 ```js
@@ -97,6 +102,77 @@ const response = await client.contacts.create({
   email: 'luiz@freneda.com.br',
   owner: 1
 })
+```
+
+```js
+// Delete contact
+const response = await client.contacts.delete(contactId)
+```
+
+```js
+// Edit contact
+const response = await client.contacts.edit(contactId, {
+  firstname: 'Luiz',
+  lastname: 'Freneda',
+  email: 'luiz@freneda.com.br',
+  owner: 1
+})
+```
+
+```js
+// If the given id exists, clear all contact info and push with new ones, if not, create a contact
+const response = await client.contacts.editOrCreate(contactId, {
+  firstname: 'Luiz',
+  lastname: 'Freneda',
+  email: 'luiz@freneda.com.br',
+  owner: 1
+})
+```
+
+```js
+// Add points to a contact
+const response = await client.contacts.addPoints(contactId, 10)
+```
+
+```js
+// Remove points of a contact
+const response = await client.contacts.subtractPoints(contactId, 10)
+```
+
+```js
+// Get notes
+const response = await client.contacts.getNotes(contactId)
+```
+
+```js
+// Get Activity Events
+const response = await client.contacts.getActivityEvents(contactId)
+```
+
+```js
+// Get Companies of a contact
+const response = await client.contacts.getCompanies(contactId)
+```
+
+```js
+// Add UTM tags
+const response = await client.contacts.addUTMTags(contactId, {
+  utm_campaign: 'utm campaign tag',
+  utm_source: 'utm source tag',
+  utm_medium: 'utm medium tag',
+  utm_content: 'utm content tag',
+  utm_term: 'utm term tag'
+})
+```
+
+```js
+// Remove UTM tag
+const response = await client.contacts.removeUTMTags(contactId, utmId)
+```
+
+```js
+// List segments of a contact
+const response = await client.contacts.listSegments(contactId)
 ```
 
 <div align="right">

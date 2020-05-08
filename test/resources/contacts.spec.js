@@ -120,4 +120,10 @@ describe('Contact', () => {
     const response = await client.contacts.removeUTMTags(1, 99)
     expect(response.status).toBe(200)
   })
+
+  it('should list contact segments', async () => {
+    nock('http://mautic-instance/api').get('/contacts/1/segments').reply(200, {})
+    const response = await client.contacts.listSegments(1)
+    expect(response.status).toBe(200)
+  })
 })

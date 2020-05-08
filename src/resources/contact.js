@@ -55,6 +55,10 @@ class Contact {
   removeUTMTags (contactId, utmId) {
     return this.client.post(`contacts/${contactId}/utm/${utmId}/remove`)
   }
+
+  listSegments (contactId) {
+    return this.client.get(`contacts/${contactId}/segments`)
+  }
 }
 
 module.exports = Contact
