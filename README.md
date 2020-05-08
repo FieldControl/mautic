@@ -76,6 +76,7 @@ const client = new Mautic({
 ### Resources
 - [Contact](#contact)
 - [Segment](#segment)
+- [Company](#company)
 
 ### Contact
 
@@ -193,6 +194,52 @@ const response = await client.segments.removeContact(1, 2) // segmentId, contact
 
 <div align="right">
   <a href="https://github.com/FieldControl/mautic/blob/master/test/resources/segments.spec.js" target="_blank">see tests</a> - <a href="https://developer.mautic.org/#segments" target="_blank">see docs</a>
+</div>
+
+### Company
+
+```js
+// Get company by id
+const response = await client.companies.get(companyId)
+```
+
+```js
+// List companies
+const response = await client.companies.list (data)
+```
+
+```js
+// Create a company
+const response = await client.companies.create (company)
+```
+
+```js
+// Edit a company
+const response = await client.companies.edit (companyId, company)
+```
+
+```js
+// If the given id exists, clear all company info and push with new ones, if not, create a company
+const response = await client.companies.editOrCreate (companyId, company)
+```
+
+```js
+// Delete a company
+const response = await client.companies.delete (companyId)
+```
+
+```js
+// Add a contact to a company
+const response = await client.companies.addContact (companyId, contactId)
+```
+
+```js
+// Remove a contact of a company
+const response = await client.companies.removeContact (companyId, contactId)
+```
+
+<div align="right">
+  <a href="https://github.com/FieldControl/mautic/blob/master/test/resources/company.spec.js" target="_blank">see tests</a> - <a href="https://developer.mautic.org/?php#companies" target="_blank">see docs</a>
 </div>
 
 <div align="center">
