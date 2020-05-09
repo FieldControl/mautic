@@ -13,11 +13,12 @@
 [![Test Coverage](https://api.codeclimate.com/v1/badges/bcbbb6e8ef15e7d3be27/test_coverage)](https://codeclimate.com/github/FieldControl/mautic/test_coverage)
 
   </p>
-  <p>
-    Built with ❤︎ by 
+  <small>
+    Built with ❤ by 
       <a href="https://github.com/FieldControl">FieldControl</a> and
-      <a href="https://github.com/FieldControl/mautic/graphs/contributors">contributors</a>
-  </p>
+      <a href="https://github.com/FieldControl/mautic/graphs/contributors">contributors</a> -
+      <a href="https://fieldcontrol.com.br/vaga-para-desenvolvedor.html?utm_source=github&utm_medium=opensource&utm_campaign=contaazul">We are hiring</a>
+  </small>
 </div>
 
 ---
@@ -273,7 +274,7 @@ This project is licensed under the [MIT License](https://opensource.org/licenses
 <div align="center">
   <p>
     <sub>
-      Open source, from <a href="https://instagram.com/fieldcontrolapp" target="_blank">Field Control</a> with ❤
+      Open source, from <a href="https://instagram.com/fieldcontrolapp" target="_blank">Field Control</a> with ❤ - <a href="https://fieldcontrol.com.br/vaga-para-desenvolvedor.html?utm_source=github&utm_medium=opensource&utm_campaign=contaazul">We are hiring!</a>
     </sub>
   </p> 
 </div>
