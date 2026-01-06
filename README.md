@@ -63,8 +63,8 @@ const Mautic = require('mautic')
 const client = new Mautic({
   baseUrl: 'http://mautic-instance/api',
   auth: {
-    username: 'luiz',
-    password: 'shhhhhhhhhhhhhh!:x'
+    username: '',
+    password: ''
   }
 })
 ```

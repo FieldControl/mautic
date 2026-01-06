@@ -2,8 +2,8 @@ const Mautic = require('./../src/index')
 const client = new Mautic({
   baseUrl: 'https://ip-instance/api',
   auth: {
-    username: 'luiz',
-    password: 'sssshhhhhhhhhh! :x~'
+    username: '',
+    password: ''
   }
 })
 
